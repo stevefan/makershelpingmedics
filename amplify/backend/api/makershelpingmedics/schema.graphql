@@ -1,0 +1,58 @@
+# type Profile
+#   @model
+# {
+#   id: ID!
+# 
+# }
+# 
+# enum UserType
+# {
+#   ANYONE
+#   MAKER
+#   HEALTHCARE
+# }
+
+type Post
+  @model 
+  @auth(rules: [
+    {allow: owner},
+    {allow: groups, groups: ["everyone"], mutations: null, queries: [get,list]}
+  ])
+{
+  id: ID!
+  title: String
+  type: PostType
+  urgency: Urgency
+  quantity: Int
+  content: String
+  designs: [Design] @connection(name: "PostDesigns")
+}
+
+enum PostType
+{
+  request
+  offer
+}
+
+enum Urgency
+{
+  low
+  medium
+  high
+  urgent
+  emergency
+}
+
+type Design
+  @model
+  @auth(rules: [
+  {allow: owner}
+  {allow: groups, groups: ["everyone"], mutations: null, queries: [get,list]}
+  ])
+{
+  id: ID!
+  name: String
+  content: String
+  post: Post @connection(name: "PostDesigns")
+}
+

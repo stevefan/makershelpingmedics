@@ -1,0 +1,26 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-makershelpingmedics-dev-10531-authRole",
+            "UnauthRoleArn": "arn:aws:iam::047535447308:role/amplify-makershelpingmedics-dev-10531-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::047535447308:role/amplify-makershelpingmedics-dev-10531-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-makershelpingmedics-dev-10531-deployment",
+            "UnauthRoleName": "amplify-makershelpingmedics-dev-10531-unauthRole",
+            "StackName": "amplify-makershelpingmedics-dev-10531",
+            "StackId": "arn:aws:cloudformation:us-west-2:047535447308:stack/amplify-makershelpingmedics-dev-10531/e4af34e0-7581-11ea-8b86-028ddc441728",
+            "AmplifyAppId": "d2d38s0z9l0s83"
+        },
+        "categories": {
+            "auth": {
+                "makershelpingmedics525f3cf5": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d2d38s0z9l0s83",
+                    "type": "manual"
+                }
+            }
+        }
+    }
+}
