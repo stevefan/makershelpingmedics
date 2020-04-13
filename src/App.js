@@ -17,29 +17,6 @@ import awsconfig from './aws-exports';
 
 Amplify.configure(awsconfig);
 
-const PostForm = () => {
-  const formik = useFormik({
-    initialValues: {
-       title: ''
-    },
-    onSubmit: values => {
-
-    },
-  });
-  return(
-    <form inSubmit={formik.handleSubmit}>
-      <input
-        id="title"
-        name="title"
-        type="string"
-        onChange={formik.handleChange}
-        value={formik.values.title}
-      />
-      <button type="submit">Submit</button>
-    </form>
-  );
-};
-
 
 
 
@@ -66,7 +43,6 @@ class App extends Component {
                     return (<ListView posts={listPosts.items} /> );
                 }}
             </Connect>
-	    <div>{PostForm}</div>
       </div>
     )
   }
